@@ -96,7 +96,7 @@ export default function About() {
       </motion.div>
 
       {/* Bio + stats */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', marginBottom: '5rem' }}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -127,7 +127,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {stats.map((s, i) => <StatCard key={s.label} {...s} index={i} />)}
         </div>
       </div>
@@ -169,7 +169,7 @@ export default function About() {
       </motion.div>
 
       {/* Tools grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {tools.map((toolGroup, gi) => (
           <motion.div
             key={toolGroup.category}

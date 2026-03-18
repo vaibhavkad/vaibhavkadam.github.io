@@ -67,7 +67,7 @@ export default function Experience() {
         </h2>
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '3rem' }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Experience */}
         <div>
           <p style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', color: '#555', marginBottom: '2rem' }}>Work History</p>

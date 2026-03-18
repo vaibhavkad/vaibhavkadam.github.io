@@ -63,26 +63,28 @@ export default function Navbar() {
       </motion.div>
 
       {/* Nav links */}
-      <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-        {navLinks.map((link) => (
-          <motion.a
-            key={link.label}
-            href={link.href}
-            whileHover={{ y: -1 }}
-            style={{
-              fontSize: '0.85rem',
-              fontWeight: 500,
-              color: '#888',
-              textDecoration: 'none',
-              letterSpacing: '0.02em',
-              transition: 'color 0.2s',
-            }}
-            onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#f0f0f0')}
-            onMouseLeave={(e) => ((e.target as HTMLElement).style.color = '#888')}
-          >
-            {link.label}
-          </motion.a>
-        ))}
+      <div className="flex gap-4 md:gap-8 items-center">
+        <div className="hidden md:flex gap-8 items-center">
+          {navLinks.map((link) => (
+            <motion.a
+              key={link.label}
+              href={link.href}
+              whileHover={{ y: -1 }}
+              style={{
+                fontSize: '0.85rem',
+                fontWeight: 500,
+                color: '#888',
+                textDecoration: 'none',
+                letterSpacing: '0.02em',
+                transition: 'color 0.2s',
+              }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#f0f0f0')}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = '#888')}
+            >
+              {link.label}
+            </motion.a>
+          ))}
+        </div>
 
         <motion.a
           href="mailto:vaibhavk1010@gmail.com"
