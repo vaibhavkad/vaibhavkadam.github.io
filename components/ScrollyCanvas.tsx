@@ -4,8 +4,9 @@ import { useEffect, useRef } from 'react';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 
 const TOTAL_FRAMES = 40;
+const basePath = '/vaibhavkadam.github.io';
 const FRAME_PATH = (n: number) =>
-  `/sequence/ezgif-frame-${String(n).padStart(3, '0')}.png`;
+  `${basePath}/sequence/ezgif-frame-${String(n).padStart(3, '0')}.png`;
 
 function drawImageCover(
   ctx: CanvasRenderingContext2D,
