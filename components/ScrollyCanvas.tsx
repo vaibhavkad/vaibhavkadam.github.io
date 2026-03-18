@@ -14,7 +14,7 @@ function drawImageCover(
   canvasW: number,
   canvasH: number
 ) {
-  const scale = Math.max(canvasW / img.naturalWidth, canvasH / img.naturalHeight);
+  const scale = Math.min(canvasW / img.naturalWidth, canvasH / img.naturalHeight);
   const w = img.naturalWidth * scale;
   const h = img.naturalHeight * scale;
   const x = (canvasW - w) / 2;
